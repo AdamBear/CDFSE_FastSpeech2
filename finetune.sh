@@ -1,1 +1,1 @@
-python3 train.py -p config/finetune/preprocess.yaml -m config/finetune/model.yaml -t config/finetune/train.yaml ----restore_step 500000
+python3 train.py -p config/finetune/preprocess.yaml -m config/finetune/model.yaml -t config/finetune/train.yaml --restore_step 500000
