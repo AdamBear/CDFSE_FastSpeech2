@@ -1,10 +1,12 @@
-dataset: "AISHELL3"
+dataset: "wav"
 
 path:
-  corpus_path: "/data/datasets/AISHELL-3/train/wav/SSB1957"
   lexicon_path: "lexicon/pinyin-lexicon-r.txt"
-  raw_path: "/data/training_data/raw_data/AISHELL3/SSB1957"
-  preprocessed_path: "./preprocessed_data/AISHELL3/SSB1957"
+  #corpus_path: "/data/datasets/AISHELL-3/train/wav/SSB1957"
+  corpus_path: "f:/datasets/data_aishell3/train"
+  raw_path: "/data/train_wav"
+  preprocessed_path: "/data/train_data/"
+
 
 preprocessing:
   val_size: 512
