@@ -24,8 +24,8 @@ def get_model(args, configs, device, train=False):
         scheduled_optim = ScheduledOptim(
             model, train_config, model_config, args.restore_step
         )
-        if args.restore_step:
-            scheduled_optim.load_state_dict(ckpt["optimizer"])
+        # if args.restore_step:
+        #     scheduled_optim.load_state_dict(ckpt["optimizer"])
         model.train()
         return model, scheduled_optim
 
