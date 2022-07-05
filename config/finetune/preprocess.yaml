@@ -1,4 +1,4 @@
-dataset: "wav"
+dataset: "AISHELL3"
 
 path:
   lexicon_path: "lexicon/pinyin-lexicon-r.txt"
