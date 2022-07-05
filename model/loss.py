@@ -95,7 +95,7 @@ class FastSpeech2Loss(nn.Module):
         energy_loss = self.mse_loss(energy_predictions, energy_targets)
         duration_loss = self.mse_loss(log_duration_predictions, log_duration_targets)
 
-        if speaker_predicts is not None:
+        if speaker_predicts is not None and self.use_spkcls:
             speaker_loss = self.spk_ce_loss(speaker_predicts, speaker_targets)
         else:
             speaker_loss = 0.0
