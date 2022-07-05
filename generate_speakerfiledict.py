@@ -3,8 +3,8 @@ import json
 
 
 speakerfile_set = {}
-basepath = "preprocessed_data/AISHELL3/"
-subsets = ["train.txt", "val.txt", "test.txt"]
+basepath = "/data/train_data/"
+subsets = ["train.txt", "val.txt"]
 for name in subsets:
     with open(os.path.join(basepath, name), "r", encoding="utf-8") as f:
         lines = f.readlines()
