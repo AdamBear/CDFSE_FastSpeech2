@@ -16,7 +16,9 @@ class FastSpeech2Loss(nn.Module):
         self.mse_loss = nn.MSELoss()
         self.mae_loss = nn.L1Loss()
         self.phn_ce_loss = nn.CrossEntropyLoss(ignore_index=0)
-        self.spk_ce_loss = nn.CrossEntropyLoss()
+        self.use_spkcls = model_config["use_spkcls"]
+        if self.use_spkcls:
+            self.spk_ce_loss = nn.CrossEntropyLoss()
         self.cls_weight = model_config["weight"]["cls"]
 
     def forward(self, inputs, predictions):
